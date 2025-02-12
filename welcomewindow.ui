@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WelcomeWindow</class>
+ <widget class="QMainWindow" name="WelcomeWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1259</width>
+    <height>696</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Welcome</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>10</y>
+      <width>1271</width>
+      <height>681</height>
+     </rect>
+    </property>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <item>
+      <widget class="QGroupBox" name="groupBox_2">
+       <property name="font">
+        <font>
+         <family>Ubuntu</family>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">
+* {
+    background-color: #1E1E2E;
+    color: #E0E0E0;
+    border-color: #2A2D3E;
+}
+QGroupBox {
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-bottom: 30px;
+    border: 2px solid;
+    border-color: #3A3F58;
+    border-radius: 15px;
+    background-color: #282A36;
+}
+QLabel {
+    margin-bottom: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #00E5FF;
+}
+label {
+    font-size: 60px;
+    color: #00BCD4;
+}
+</string>
+       </property>
+       <property name="title">
+        <string/>
+       </property>
+       <layout class="QVBoxLayout" name="verticalLayout_5">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QLabel" name="logo1">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">margin-left:25%; margin-right:25%; margin-bottom:0px;</string>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="label">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="font">
+               <font>
+                <family>Ubuntu</family>
+                <pointsize>-1</pointsize>
+                <bold>true</bold>
+               </font>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">margin-left:30%; margin-right:30%; margin-top:0px; font-size:50px; color:#00E5FF;</string>
+              </property>
+              <property name="text">
+               <string>Welcome to Prashnottar</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignmentFlag::AlignHCenter</set>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox">
+            <property name="styleSheet">
+             <string notr="true">
+* {
+    color: #E0E0E0;
+    font-size: 30px;
+    background-color: #0F172A;
+}
+QGroupBox {
+    padding: 50px;
+    border: 2px solid #3A3F58;
+    border-radius: 15px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-bottom: 30px;
+}
+QPushButton {
+    background-color: #00BCD4;
+    color: #fff;
+    border: 1px solid #0097A7;
+    border-radius: 10px;
+    font-size: 25px;
+    padding: 10px;
+}
+QPushButton:hover {
+    background-color: #00838F;
+}
+</string>
+            </property>
+            <property name="title">
+             <string>Login As</string>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_3">
+             <item>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <widget class="QComboBox" name="comboBox">
+                 <property name="styleSheet">
+                  <string notr="true">
+height: 50px;
+background-color: #3A3F58;
+color: #E0E0E0;
+border: 1px solid #555;
+border-radius: 10px;
+font-size: 20px;
+                  </string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="pushGo">
+                 <property name="text">
+                  <string>Go</string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="label_2">
+            <property name="styleSheet">
+             <string notr="true">margin-left:30%; margin-right:30%; margin-top:0px; font-size: 18px; color:#00BCD4;</string>
+            </property>
+            <property name="text">
+             <string>&quot;Master Every Question with Confidence!&quot;</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignmentFlag::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1259</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

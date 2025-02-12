@@ -1,0 +1,15 @@
+release/examiner.o
+release/examinerlogin.o
+release/main.o
+release/student.o
+release/studentlogin.o
+release/studentregistration.o
+release/teacherregistration.o
+release/welcomewindow.o
+release/moc_examiner.o
+release/moc_examinerlogin.o
+release/moc_student.o
+release/moc_studentlogin.o
+release/moc_studentregistration.o
+release/moc_teacherregistration.o
+release/moc_welcomewindow.o

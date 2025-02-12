@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>StudentPortal</class>
+ <widget class="QDialog" name="StudentPortal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1280</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Student Portal</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+QComboBox {
+    border: 2px solid;
+    border-radius: 10px;
+    border-color: #2E4053;
+    color: #154360;
+    background-color: #ECF0F1;
+}
+* {
+    background-color: #2C3E50;
+    font-family: Roboto;
+    color: #ECF0F1;
+}
+QLineEdit {
+    height: 35px;
+    border: 1px solid;
+    border-radius: 8px;
+    border-color: #154360;
+    background-color: #ECF0F1;
+    color: #2C3E50;
+}
+QPushButton {
+    background-color: #5D6D7E;
+    color: #154360;
+    border-radius: 10px;
+    border: 2px solid;
+    border-color: #2E4053;
+    height: 35px;
+    width: 120px;
+}
+QGroupBox {
+    width: 480px;
+    font-size: 16px;
+}
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QLabel" name="titleLabel">
+     <property name="text">
+      <string>Student Dashboard</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="font">
+      <font>
+       <family>Roboto</family>
+       <pointsize>48</pointsize>
+       <bold>true</bold>
+      </font>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QHBoxLayout" name="contentLayout">
+     <item>
+      <widget class="QGroupBox" name="profileGroupBox">
+       <property name="title">
+        <string>Profile Information</string>
+       </property>
+       <layout class="QVBoxLayout" name="profileLayout">
+        <item>
+         <widget class="QLabel" name="studentIDLabel">
+          <property name="text">
+           <string>ID: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="fullNameLabel">
+          <property name="text">
+           <string>Full Name: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="emailLabel">
+          <property name="text">
+           <string>Email: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="batchLabel">
+          <property name="text">
+           <string>Batch: </string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="classLabel">
+          <property name="text">
+           <string>Class: </string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+     <item>
+      <widget class="QGroupBox" name="actionGroupBox">
+       <property name="title">
+        <string>Available Actions</string>
+       </property>
+       <layout class="QVBoxLayout" name="actionLayout">
+        <item>
+         <widget class="QPushButton" name="examButton">
+          <property name="text">
+           <string>Enter Exam</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="changePasswordButton">
+          <property name="text">
+           <string>Change Password</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="resultsButton">
+          <property name="text">
+           <string>Check Previous Results</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+</ui>
