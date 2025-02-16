@@ -3,9 +3,7 @@
 
 #include <QMainWindow>
 #include <QDebug>
-//#include <QtSql>
 #include <QFileInfo>
-//#include <QSqlDatabase>
 #include "studentregistration.h"
 #include "student.h"
 
@@ -36,7 +34,6 @@ private slots:
 
 private:
     Ui::Prashnottar *ui;
-    //class8 *class8Window;
     studentRegistration *registrationWindow;
     Student *studentDashboard;
 
