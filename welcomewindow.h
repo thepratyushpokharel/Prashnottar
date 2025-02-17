@@ -1,6 +1,5 @@
 #ifndef WELCOMEWINDOW_H
 #define WELCOMEWINDOW_H
-
 #include <QMainWindow>
 #include "studentlogin.h"
 #include "examinerlogin.h"

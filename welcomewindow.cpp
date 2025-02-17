@@ -40,8 +40,6 @@ void WelcomeWindow::on_pushGo_clicked()
         close();
         studentLoginWindow = new Prashnottar();
         studentLoginWindow->showMaximized();
-        //studentWindow = new Student("defaultID","defaultFname","defaultLname","defaultEmail",QDate(2024,07,21),"defaultBatch","defaultGrade",this);
-        //studentWindow->showMaximized();
     }
     else
     {
