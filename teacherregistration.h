@@ -2,8 +2,8 @@
 #define TEACHERREGISTRATION_H
 
 #include <QDialog>
-// #include <QSqlDatabase>
-// #include <QSql>
+#include <QSqlDatabase>
+#include <QSql>
 
 namespace Ui {
 class teacherRegistration;
@@ -42,7 +42,7 @@ private slots:
 
 private:
     Ui::teacherRegistration *ui;
-    // QSqlDatabase dab2;
+    QSqlDatabase dab2;
 };
 
 #endif // TEACHERREGISTRATION_H

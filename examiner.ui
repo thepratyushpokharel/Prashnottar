@@ -35,6 +35,9 @@ margin-right:300px;
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
     <widget class="QPushButton" name="pushButton">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="text">
       <string>Check students Result</string>
      </property>
@@ -42,6 +45,9 @@ margin-right:300px;
    </item>
    <item>
     <widget class="QPushButton" name="pushButton_2">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="text">
       <string>Take Exams</string>
      </property>
@@ -49,8 +55,11 @@ margin-right:300px;
    </item>
    <item>
     <widget class="QPushButton" name="pushButton_3">
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
      <property name="text">
-      <string>Go Back</string>
+      <string>Log Out</string>
      </property>
     </widget>
    </item>

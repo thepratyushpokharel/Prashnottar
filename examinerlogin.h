@@ -2,14 +2,10 @@
 #define EXAMINERLOGIN_H
 
 #include <QDialog>
-#include <QDebug>
-#include <QFileInfo>
-//#include <QSqlDatabase>
+#include <QSqlDatabase>
 #include "teacherregistration.h"
 #include "examiner.h"
 
-
-QT_BEGIN_NAMESPACE
 namespace Ui {
 class ExaminerLogin;
 }
@@ -29,9 +25,11 @@ private slots:
 
     void on_pushButton_2_clicked();
 
+    void on_linePassword_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::ExaminerLogin *ui;
-    // QSqlDatabase dab;
+    QSqlDatabase dab;
     teacherRegistration *signup;
     examiner *examinerWindow;
 };

@@ -2,7 +2,7 @@
 #define EXAMINER_H
 
 #include <QDialog>
-//#include "addstudents.h"
+#include "addstudents.h"
 
 
 namespace Ui {
@@ -26,7 +26,7 @@ private slots:
 
 private:
     Ui::examiner *ui;
-    //addStudents *addWindow;
+    addStudents *addWindow;
     QString sub;
 };
 

@@ -1,9 +1,9 @@
 #include "examiner.h"
 #include "ui_examiner.h"
 #include "examinerlogin.h"
-//#include "checkresult.h"
+#include "checkresult.h"
 
-//CheckResult *resultWindow;
+CheckResult *resultWindow;
 
 ExaminerLogin *examinerLoginWindow;
 
@@ -13,6 +13,8 @@ examiner::examiner(const QString &subject, QWidget *parent)
     , sub(subject)
 {
     ui->setupUi(this);
+    this->setWindowTitle("Prashnottar");
+    this->setWindowIcon(QIcon(":/rec/assets/logo1.png"));
 }
 
 examiner::~examiner()
@@ -23,16 +25,16 @@ examiner::~examiner()
 void examiner::on_pushButton_clicked()
 {
     close();
-    // resultWindow = new CheckResult("default",sub,this);
-    // resultWindow->showMaximized();
+    resultWindow = new CheckResult("default",sub,this);
+    resultWindow->showMaximized();
 }
 
 
 void examiner::on_pushButton_2_clicked()
 {
     close();
-    // addWindow =  new addStudents();
-    // addWindow->showMaximized();
+    addWindow =  new addStudents();
+    addWindow->showMaximized();
 }
 
 

@@ -2,14 +2,14 @@
 #include "ui_teacherregistration.h"
 #include "examinerlogin.h"
 #include <QMessageBox>
-//#include <QtSql>
-//#include <QSqlDatabase>
+#include <QtSql>
+#include <QSqlDatabase>
 #include <QComboBox>
 #include <QPixmap>
 #include <QFontDatabase>
 
 ExaminerLogin *examinerlogin;
-//QSqlDatabase dab2;
+QSqlDatabase dab2;
 
 int countDigits2(long long n)
 {
@@ -63,22 +63,24 @@ teacherRegistration::teacherRegistration(QWidget *parent)
     , ui(new Ui::teacherRegistration)
 {
     ui->setupUi(this);
-    QPixmap logo(":/rec/assets/logo.png");
-    //ui->logo3->setPixmap(logo.scaled(200,200,Qt::KeepAspectRatio));
+    this->setWindowTitle("Prashnottar");
+    this->setWindowIcon(QIcon(":/rec/assets/logo1.png"));
+    QPixmap logo(":/rec/assets/logo1.png");
+    ui->logo3->setPixmap(logo.scaled(100,100,Qt::KeepAspectRatio));
     ui->comboBox->addItem("Male");
     ui->comboBox->addItem("Female");
     ui->comboBox->addItem("Others");
 
-    // dab2 = QSqlDatabase::addDatabase("QMYSQL");
-    // dab2.setHostName("localhost");
-    // dab2.setUserName("root");
-    // dab2.setPassword("");
-    // dab2.setDatabaseName("Prashnottar");
-    // dab2.setPort(3377);
-    // if (!dab2.open())
-    // {
-    //     QMessageBox::critical(this, "Database Error", "Failed to connect to database: " + dab2.lastError().text());
-    // }
+    dab2 = QSqlDatabase::addDatabase("QMYSQL");
+    dab2.setHostName("localhost");
+    dab2.setUserName("root");
+    dab2.setPassword("");
+    dab2.setDatabaseName("prashnottar");
+    dab2.setPort(3306);
+    if (!dab2.open())
+    {
+        QMessageBox::critical(this, "Database Error", "Failed to connect to database: " + dab2.lastError().text());
+    }
 }
 
 teacherRegistration::~teacherRegistration()
@@ -88,137 +90,133 @@ teacherRegistration::~teacherRegistration()
 
 void teacherRegistration::on_register_2_clicked()
 {
-    // if (dab2.open())
-    // {
-    //     QString fN = ui->lineEdit_fn->text();
-    //     QString mN = ui->lineEdit_mn->text();
-    //     QString lN = ui->lineEdit_ln->text();
-    //     QString id = ui->lineEdit_id->text();
-    //     QString email = ui->lineEdit_email->text();
-    //     long long pNum1 = ui->lineEdit_phn->text().toLongLong();
-    //     QString pNum2 = ui->lineEdit_phn->text();
-    //     QString chk1 = ui->checkBox_8->text();
-    //     QString chk2 = ui->checkBox_9->text();
-    //     QString chk3 = ui->checkBox_10->text();
-    //     QString sub = ui->lineEdit_sub->text();
-    //     QString sex = ui->comboBox->currentText();
-    //     QDate dob = ui->dateEdit_dob->date();
-    //     QString password = ui->lineEdit_psd->text();
-    //     QString cpassword = ui->lineEdit_cpsd->text();
+    if (dab2.open())
+    {
+        QString fN = ui->lineEdit_fn->text();
+        QString mN = ui->lineEdit_mn->text();
+        QString lN = ui->lineEdit_ln->text();
+        QString id = ui->lineEdit_id->text();
+        QString email = ui->lineEdit_email->text();
+        long long pNum1 = ui->lineEdit_phn->text().toLongLong();
+        QString pNum2 = ui->lineEdit_phn->text();
+        QString chk1 = ui->checkBox_8->text();
+        QString chk2 = ui->checkBox_9->text();
+        QString chk3 = ui->checkBox_10->text();
+        QString sub = ui->lineEdit_sub->text();
+        QString sex = ui->comboBox->currentText();
+        QDate dob = ui->dateEdit_dob->date();
+        QString password = ui->lineEdit_psd->text();
+        QString cpassword = ui->lineEdit_cpsd->text();
 
-    //     QSqlQuery chku(dab2), chke(dab2), chkp(dab2);
-    //     chku.prepare("SELECT * FROM teacher_Data WHERE teacher_id=:teacher_id");
-    //     chku.bindValue(":teacher_id", id);
-    //     chke.prepare("SELECT * FROM teacher_Data WHERE email=:email");
-    //     chke.bindValue(":email", email);
-    //     chkp.prepare("SELECT * FROM teacher_Data WHERE phone_number=:phone_number");
-    //     chkp.bindValue(":phone_number", pNum1);
+        QSqlQuery chku(dab2), chke(dab2), chkp(dab2);
+        chku.prepare("SELECT * FROM teacher_Data WHERE teacher_id=:teacher_id");
+        chku.bindValue(":teacher_id", id);
+        chke.prepare("SELECT * FROM teacher_Data WHERE email=:email");
+        chke.bindValue(":email", email);
+        chkp.prepare("SELECT * FROM teacher_Data WHERE phone_number=:phone_number");
+        chkp.bindValue(":phone_number", pNum1);
 
-    //     chku.exec();
-    //     chkp.exec();
-    //     chke.exec();
+        chku.exec();
+        chkp.exec();
+        chke.exec();
 
-    //     if (password != cpassword)
-    //     {
-    //         QMessageBox::warning(this, "Error", "Password doesn't match. Please try again.");
-    //     }
-    //     else if (countDigits2(pNum1) != 10)
-    //     {
-    //         QMessageBox::warning(this, "Error", "Phone number is not correct. Please try again.");
-    //     }
-    //     else if (fN == "\0" || lN == "\0" || id == "\0" || email == "\0" || pNum2 == "\0")
-    //     {
-    //         QMessageBox::warning(this, "Error", "Fields marked * are mandatory.");
+        if (password != cpassword)
+        {
+            QMessageBox::warning(this, "Error", "Password doesn't match. Please try again.");
+        }
+        else if (countDigits2(pNum1) != 10)
+        {
+            QMessageBox::warning(this, "Error", "Phone number is not correct. Please try again.");
+        }
+        else if (fN == "\0" || lN == "\0" || id == "\0" || email == "\0" || pNum2 == "\0")
+        {
+            QMessageBox::warning(this, "Error", "Fields marked * are mandatory.");
 
-    //     }
-    //     else if (!dob.isValid())
-    //     {
-    //         QMessageBox::warning(this, "Error", "Invalid Date.");
-    //     }
-    //     else if (chku.next())
-    //     {
-    //         QMessageBox::warning(this, "Error", "Invalid ID or already registered");
-    //     }
-    //     else if (chke.next())
-    //     {
-    //         QMessageBox::warning(this, "Error", "Email already used.");
-    //     }
-    //     else if (chkp.next())
-    //     {
-    //         QMessageBox::warning(this, "Error", "Phone number already used.");
-    //     }
-    //     else if (!chkEmail2(email))
-    //     {
-    //         QMessageBox::warning(this, "Error", "Invalid Email.");
-    //     }
-    //     else
-    //     {
-    //         if(ui->checkBox_8->isChecked() || ui->checkBox_9->isChecked() || ui->checkBox_10->isChecked())
-    //         {
-    //         QSqlQuery qry(dab2);
-    //         qry.prepare("INSERT INTO teacher_data(teacher_id, password, first_name, middle_name, last_name, email, date_of_birth, phone_number, subject_code, sex)"
-    //                     "VALUES(:teacher_id, :password, :first_name, :middle_name, :last_name, :email, :date_of_birth, :phone_number, :subject_code, :sex)");
-    //         qry.bindValue(":teacher_id", id);
-    //         qry.bindValue(":password", password);
-    //         qry.bindValue(":first_name", fN);
-    //         qry.bindValue(":middle_name", mN);
-    //         qry.bindValue(":last_name", lN);
-    //         qry.bindValue(":email", email);
-    //         qry.bindValue(":date_of_birth", dob);
-    //         qry.bindValue(":phone_number", pNum1);
-    //         qry.bindValue(":subject_code",sub);
-    //         qry.bindValue(":sex", sex);
+        }
+        else if (!dob.isValid())
+        {
+            QMessageBox::warning(this, "Error", "Invalid Date.");
+        }
+        else if (chku.next())
+        {
+            QMessageBox::warning(this, "Error", "Invalid ID or already registered");
+        }
+        else if (chke.next())
+        {
+            QMessageBox::warning(this, "Error", "Email already used.");
+        }
+        else if (chkp.next())
+        {
+            QMessageBox::warning(this, "Error", "Phone number already used.");
+        }
+        else if (!chkEmail2(email))
+        {
+            QMessageBox::warning(this, "Error", "Invalid Email.");
+        }
+        else
+        {
+            if(ui->checkBox_8->isChecked() || ui->checkBox_9->isChecked() || ui->checkBox_10->isChecked())
+            {
+            QSqlQuery qry(dab2);
+            qry.prepare("INSERT INTO teacher_data(teacher_id, password, first_name, middle_name, last_name, email, date_of_birth, phone_number, subject_code, sex)"
+                        "VALUES(:teacher_id, :password, :first_name, :middle_name, :last_name, :email, :date_of_birth, :phone_number, :subject_code, :sex)");
+            qry.bindValue(":teacher_id", id);
+            qry.bindValue(":password", password);
+            qry.bindValue(":first_name", fN);
+            qry.bindValue(":middle_name", mN);
+            qry.bindValue(":last_name", lN);
+            qry.bindValue(":email", email);
+            qry.bindValue(":date_of_birth", dob);
+            qry.bindValue(":phone_number", pNum1);
+            qry.bindValue(":subject_code",sub);
+            qry.bindValue(":sex", sex);
 
-    //         QSqlQuery qry2(dab2);
+            QSqlQuery qry2(dab2);
 
-    //             qry2.prepare("INSERT INTO teacher_grade (teacher_id, class_code)"
-    //                          "VALUES(:teacher_id, :class_code)");
-    //             qry2.bindValue(":teacher_id", id);
-    //             qry2.bindValue(":class_code", chk1);
+                qry2.prepare("INSERT INTO teacher_grade (teacher_id, class_code)"
+                             "VALUES(:teacher_id, :class_code)");
+                qry2.bindValue(":teacher_id", id);
+                qry2.bindValue(":class_code", chk1);
 
-    //         QSqlQuery qry3(dab2);
-    //             qry3.prepare("INSERT INTO teacher_grade (teacher_id, class_code)"
-    //                          "VALUES(:teacher_id, :class_code)");
-    //             qry3.bindValue(":teacher_id", id);
-    //             qry3.bindValue(":class_code", chk2);
+            QSqlQuery qry3(dab2);
+                qry3.prepare("INSERT INTO teacher_grade (teacher_id, class_code)"
+                             "VALUES(:teacher_id, :class_code)");
+                qry3.bindValue(":teacher_id", id);
+                qry3.bindValue(":class_code", chk2);
 
-    //         QSqlQuery qry4(dab2);
-    //             qry4.prepare("INSERT INTO teacher_grade (teacher_id, class_code)"
-    //                          "VALUES(:teacher_id, :class_code)");
-    //             qry4.bindValue(":teacher_id", id);
-    //             qry4.bindValue(":class_code", chk3);
+            QSqlQuery qry4(dab2);
+                qry4.prepare("INSERT INTO teacher_grade (teacher_id, class_code)"
+                             "VALUES(:teacher_id, :class_code)");
+                qry4.bindValue(":teacher_id", id);
+                qry4.bindValue(":class_code", chk3);
 
 
-    //         if (qry.exec() && qry2.exec() && qry3.exec() && qry4.exec())
-    //              {
-    //             QMessageBox::information(this, "Sign Up", "Signed up successfully.");
-    //             close();
-    //             examinerlogin = new ExaminerLogin();
-    //             examinerlogin->showMaximized();
-    //             }
-    //             else
-    //              {
-    //             QMessageBox::warning(this, "Sign Up", "Sign up failed.");
-    //             qDebug() << qry.lastError().text() << Qt::endl;
-    //              }
-    //         }
-    //          else
-    //          {
-    //             QMessageBox::warning(this,"Error","Please choose all the grades you teach");
+            if (qry.exec() && qry2.exec() && qry3.exec() && qry4.exec())
+                 {
+                QMessageBox::information(this, "Sign Up", "Signed up successfully.");
+                close();
+                examinerlogin = new ExaminerLogin();
+                examinerlogin->showMaximized();
+                }
+                else
+                 {
+                QMessageBox::warning(this, "Sign Up", "Sign up failed.");
+                qDebug() << qry.lastError().text() << Qt::endl;
+                 }
+            }
+             else
+             {
+                QMessageBox::warning(this,"Error","Please choose all the grades you teach");
 
-    //            }
+               }
 
-    //     }
-    // }
-    // else
-    // {
-    //     QMessageBox::warning(this, "Error", "Database connection is not open.");
-    // }
-    // dab2.close();
-
-    close();
-    examinerlogin = new ExaminerLogin();
-    examinerlogin->showMaximized();
+        }
+    }
+    else
+    {
+        QMessageBox::warning(this, "Error", "Database connection is not open.");
+    }
+    dab2.close();
 }
 
 
