@@ -3,11 +3,11 @@
 
 #include <QMainWindow>
 #include <QDebug>
+#include <QtSql>
 #include <QFileInfo>
+#include <QSqlDatabase>
 #include "studentregistration.h"
 #include "student.h"
-
-
 
 
 QT_BEGIN_NAMESPACE
@@ -32,8 +32,11 @@ private slots:
 
     void on_pushButton_3_clicked();
 
+    void on_passwordLine_cursorPositionChanged(int arg1, int arg2);
+
 private:
     Ui::Prashnottar *ui;
+    //class8 *class8Window;
     studentRegistration *registrationWindow;
     Student *studentDashboard;
 

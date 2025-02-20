@@ -28,7 +28,7 @@ color:#0000ad;
 	background-color: rgb(255, 255, 255);
 }
 *{
-	background-color: rgba(235,206,188,255);
+	background-color: rgba(33,35,50,255);
 font-family:Ubuntu Medium;
 color:#fff;
 }
@@ -73,6 +73,49 @@ QGroupBox
      </property>
     </spacer>
    </item>
+   <item row="0" column="0">
+    <layout class="QHBoxLayout" name="horizontalLayout_9">
+     <item>
+      <widget class="QLabel" name="logo2">
+       <property name="styleSheet">
+        <string notr="true"/>
+       </property>
+       <property name="text">
+        <string>TextLabel</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QLabel" name="label_12">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+       <property name="font">
+        <font>
+         <family>Ubuntu 7</family>
+         <pointsize>35</pointsize>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">color: #fffff
+border:1px solid;
+border-radius:20px;
+margin-left:100px;
+margin-right:200px;</string>
+       </property>
+       <property name="text">
+        <string>Student Registration        </string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignmentFlag::AlignCenter</set>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </item>
    <item row="2" column="0">
     <widget class="QGroupBox" name="groupBox">
      <property name="font">
@@ -84,7 +127,7 @@ QGroupBox
      <property name="styleSheet">
       <string notr="true">*
 {
-	background-color: rgb(73, 41, 18);
+	background-color: rgba(33,35,50,255);
 font-family:Ubuntu;
 font-size:19px;
 }
@@ -95,6 +138,7 @@ border-radius:20px;
 padding-top:30px;
 	margin-left:120px;
 margin-right:120px;
+border-color: #ffffff
 }
 QLineEdit{
 margin-right:140px;
@@ -620,6 +664,9 @@ background-color: rgb(255, 255, 255);</string>
         </item>
         <item>
          <widget class="QPushButton" name="pushButton_2">
+          <property name="cursor">
+           <cursorShape>PointingHandCursor</cursorShape>
+          </property>
           <property name="styleSheet">
            <string notr="true">background-color: rgb(167, 171, 170);
 color: rgba(33,35,50,255);
@@ -658,6 +705,9 @@ margin-right:100px;</string>
           </item>
           <item>
            <widget class="QPushButton" name="pushButton">
+            <property name="cursor">
+             <cursorShape>PointingHandCursor</cursorShape>
+            </property>
             <property name="styleSheet">
              <string notr="true">color: rgba(33,35,50,255);
 background-color: rgb(167, 171, 170);</string>
@@ -673,49 +723,6 @@ background-color: rgb(167, 171, 170);</string>
       </item>
      </layout>
     </widget>
-   </item>
-   <item row="0" column="0">
-    <layout class="QHBoxLayout" name="horizontalLayout_9">
-     <item>
-      <widget class="QLabel" name="logoS">
-       <property name="styleSheet">
-        <string notr="true"/>
-       </property>
-       <property name="text">
-        <string>TextLabel</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLabel" name="label_12">
-       <property name="sizePolicy">
-        <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-         <horstretch>0</horstretch>
-         <verstretch>0</verstretch>
-        </sizepolicy>
-       </property>
-       <property name="font">
-        <font>
-         <family>Ubuntu 7</family>
-         <pointsize>35</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(73, 41, 18);
-border:1px solid;
-border-radius:20px;
-margin-left:100px;
-margin-right:200px;</string>
-       </property>
-       <property name="text">
-        <string>Student Registration</string>
-       </property>
-       <property name="alignment">
-        <set>Qt::AlignmentFlag::AlignCenter</set>
-       </property>
-      </widget>
-     </item>
-    </layout>
    </item>
   </layout>
  </widget>

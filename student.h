@@ -2,11 +2,11 @@
 #define STUDENT_H
 
 #include <QDialog>
-// #include "class8.h"
-// #include "class9.h"
-// #include "class10.h"
+#include "class8.h"
+#include "class9.h"
+#include "class10.h"
 #include "qdatetime.h"
-//#include "changepassword.h"
+#include "changepassword.h"
 #include <QString>
 
 
@@ -45,11 +45,11 @@ private:
     QDate studentDOB;
     QString studentBatch;
     QString studentGrade;
-    // class8 *class8Window;
-    // class9 *class9Window;
-    // class10 *class10Window;
+    class8 *class8Window;
+    class9 *class9Window;
+    class10 *class10Window;
 
-    //changePassword *passwordWindow;
+    changePassword *passwordWindow;
 
 };
 
