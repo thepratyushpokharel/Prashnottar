@@ -1,10 +1,9 @@
 #ifndef WELCOME_H
 #define WELCOME_H
-//#include "studentlogin.h"
-//#include "examinerlogin.h"
+#include "studentlogin.h"
+#include "examinerlogin.h"
 #include <QDialog>
-//#include <student.h>
-
+#include <student.h>
 
 namespace Ui {
 class Welcome;
@@ -24,12 +23,10 @@ private slots:
 
 private:
     Ui::Welcome *ui;
-    // ExamSphere *studentLoginWindow;
-    // ExaminerLogin *examinerWindow;
-    // QComboBox *combobox;
-    // Student *studentWindow;
-
-
+    Prashnottar *studentLoginWindow;
+    ExaminerLogin *examinerWindow;
+    QComboBox *combobox;
+    Student *studentWindow;
 };
 
 #endif // WELCOME_H

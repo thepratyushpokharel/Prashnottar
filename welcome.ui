@@ -26,7 +26,7 @@
   </property>
   <property name="styleSheet">
    <string notr="true">*{
-	background-color: rgba(235,206,188,255);
+	background-color: rgba(33,35,50,255);
 font-family:Ubuntu;
 
 }
@@ -59,6 +59,9 @@ QTableWidget
   </property>
   <layout class="QVBoxLayout" name="verticalLayout_3">
    <item>
+    <layout class="QVBoxLayout" name="verticalLayout"/>
+   </item>
+   <item>
     <spacer name="verticalSpacer_2">
      <property name="orientation">
       <enum>Qt::Orientation::Vertical</enum>
@@ -75,17 +78,15 @@ QTableWidget
     </spacer>
    </item>
    <item>
-    <layout class="QVBoxLayout" name="verticalLayout">
-     <item>
-      <widget class="QGroupBox" name="groupBox_2">
-       <property name="font">
-        <font>
-         <family>Ubuntu</family>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">*{
-	background-color: rgba(73,41,18,255);
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="font">
+      <font>
+       <family>Ubuntu</family>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">*{
+	background-color: rgba(33,35,50,255);
 color:rgba(251,238,230,255);
 	border-color: rgb(42, 45, 62);
 }
@@ -107,86 +108,108 @@ label
 font-size:70px;
 }
 </string>
-       </property>
-       <property name="title">
-        <string/>
-       </property>
-       <layout class="QVBoxLayout" name="verticalLayout_5">
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_5">
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout_4">
         <item>
-         <layout class="QVBoxLayout" name="verticalLayout_4">
-          <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
-            <item>
-             <widget class="QLabel" name="logo1">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">margin-left:30%;
+         <layout class="QHBoxLayout" name="horizontalLayout"/>
+        </item>
+        <item>
+         <widget class="QLabel" name="logo1">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">margin-left:30%;
 margin-right:30%;
 margin-bottom:0px;</string>
-              </property>
-              <property name="text">
-               <string>TextLabel</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft</set>
-              </property>
-             </widget>
-            </item>
-            <item>
-             <widget class="QLabel" name="label">
-              <property name="sizePolicy">
-               <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
-                <horstretch>0</horstretch>
-                <verstretch>0</verstretch>
-               </sizepolicy>
-              </property>
-              <property name="font">
-               <font>
-                <family>Ubuntu</family>
-                <pointsize>-1</pointsize>
-                <bold>false</bold>
-               </font>
-              </property>
-              <property name="styleSheet">
-               <string notr="true">margin-left:30%;
+          </property>
+          <property name="text">
+           <string>TextLabel</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignLeading|Qt::AlignmentFlag::AlignLeft|Qt::AlignmentFlag::AlignTop</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <family>Ubuntu</family>
+            <pointsize>-1</pointsize>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">margin-left:30%;
 margin-right:30%;
 margin-top:0px;
 margin-bottom:0px;
 padding:0px 0px 0px 0px;
 font-size:70px;</string>
-              </property>
-              <property name="text">
-               <string>Welcome to Prashnottar</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter</set>
-              </property>
-             </widget>
-            </item>
-           </layout>
-          </item>
-          <item>
-           <widget class="QGroupBox" name="groupBox">
-            <property name="font">
-             <font>
-              <family>Ubuntu</family>
-              <pointsize>-1</pointsize>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">*{color: rgba(251,238,230,255);
+          </property>
+          <property name="text">
+           <string>Welcome to Prashnottar</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignBottom|Qt::AlignmentFlag::AlignHCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="font">
+           <font>
+            <family>Ubuntu</family>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">margin-left:30%;
+margin-right:30%;
+margin-top:0px;
+</string>
+          </property>
+          <property name="text">
+           <string>&quot;Master Every Question with Confidence!&quot;</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignmentFlag::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="groupBox">
+        <property name="font">
+         <font>
+          <family>Ubuntu</family>
+          <pointsize>-1</pointsize>
+         </font>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">*{color: rgba(251,238,230,255);
 font-size:40px;
-background-color:black;
+background-color:rgba(33,35,50,255);
 }
 QGroupBox{
 	padding:70px;
 border:1px solid;
-	border-color: rgb(42, 45, 62);
+	border-color: #ffffff;
 border-radius:20px;
 margin-left:80%;
 margin-right:80%;
@@ -197,42 +220,45 @@ margin-top:30px;
 	margin-left:80%;
 margin-right:80%;
 }</string>
-            </property>
-            <property name="title">
-             <string>Login As</string>
-            </property>
-            <layout class="QHBoxLayout" name="horizontalLayout_3">
-             <item>
-              <spacer name="horizontalSpacer">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
-               </property>
-               <property name="sizeType">
-                <enum>QSizePolicy::Policy::Preferred</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>300</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-             <item>
-              <layout class="QVBoxLayout" name="verticalLayout_2">
-               <item>
-                <widget class="QComboBox" name="comboBox">
-                 <property name="font">
-                  <font>
-                   <family>Ubuntu</family>
-                   <pointsize>-1</pointsize>
-                  </font>
-                 </property>
-                 <property name="cursor">
-                  <cursorShape>PointingHandCursor</cursorShape>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">height: 60px;
+        </property>
+        <property name="title">
+         <string>Login As</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignmentFlag::AlignHCenter|Qt::AlignmentFlag::AlignTop</set>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Policy::Preferred</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>300</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_2">
+           <item>
+            <widget class="QComboBox" name="comboBox">
+             <property name="font">
+              <font>
+               <family>Ubuntu</family>
+               <pointsize>-1</pointsize>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">height: 60px;
 background-color: #a7abaa;
 color:#fff;
 width:70px;
@@ -241,22 +267,22 @@ border-color: rgb(42, 45, 62);
 border-radius:15px;
 font-size:25px;
 </string>
-                 </property>
-                </widget>
-               </item>
-               <item>
-                <widget class="QPushButton" name="pushGo">
-                 <property name="font">
-                  <font>
-                   <family>Ubuntu</family>
-                   <pointsize>-1</pointsize>
-                  </font>
-                 </property>
-                 <property name="cursor">
-                  <cursorShape>PointingHandCursor</cursorShape>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">background-color: #a7abaa;
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushGo">
+             <property name="font">
+              <font>
+               <family>Ubuntu</family>
+               <pointsize>-1</pointsize>
+              </font>
+             </property>
+             <property name="cursor">
+              <cursorShape>PointingHandCursor</cursorShape>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">background-color: #a7abaa;
 color:#fff;
 width:70px;
 height:50px;
@@ -265,60 +291,48 @@ border-color: rgb(42, 45, 62);
 border-radius:15px;
 font-size:25px;
 </string>
-                 </property>
-                 <property name="text">
-                  <string>Go</string>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </item>
-             <item>
-              <spacer name="horizontalSpacer_2">
-               <property name="orientation">
-                <enum>Qt::Orientation::Horizontal</enum>
-               </property>
-               <property name="sizeType">
-                <enum>QSizePolicy::Policy::Preferred</enum>
-               </property>
-               <property name="sizeHint" stdset="0">
-                <size>
-                 <width>300</width>
-                 <height>20</height>
-                </size>
-               </property>
-              </spacer>
-             </item>
-            </layout>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="label_2">
-            <property name="font">
-             <font>
-              <family>Ubuntu</family>
-             </font>
-            </property>
-            <property name="styleSheet">
-             <string notr="true">margin-left:30%;
-margin-right:30%;
-margin-top:0px;
-</string>
-            </property>
-            <property name="text">
-             <string>&quot;Master Every Question with Confidence!&quot;</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignmentFlag::AlignCenter</set>
-            </property>
-           </widget>
-          </item>
-         </layout>
-        </item>
-       </layout>
-      </widget>
-     </item>
-    </layout>
+             </property>
+             <property name="text">
+              <string>Go</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer_2">
+           <property name="orientation">
+            <enum>Qt::Orientation::Horizontal</enum>
+           </property>
+           <property name="sizeType">
+            <enum>QSizePolicy::Policy::Preferred</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>300</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Orientation::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
    </item>
   </layout>
  </widget>
