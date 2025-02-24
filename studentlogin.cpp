@@ -29,7 +29,7 @@ Prashnottar::Prashnottar(QWidget *parent)
     messageIntro.resize(800,800);
     messageIntro.setStyleSheet(
         "QMessageBox {"
-        "    background-color: #fff;"
+        "    background-color: black;"
         "    color: #000;"
         "}"
         );
